@@ -3,10 +3,10 @@ object Chapter4e {
   case class Person(name: String, age: Int)
 
   val anne: Person = Person("Anne", 35)
-  val anneName = anne.name
-  val anneAge = anne.age
+  val anneName: String = anne.name
+  val anneAge: Int = anne.age
   def greeting(person: Person): String = s"hi ${person.name}"
-  val anneWithAmendedAge = anne.copy(age = 36)
+  val anneWithAmendedAge: Person = anne.copy(age = 36)
 
   enum TrafficLight:
     case Red, Amber, Green
@@ -42,10 +42,10 @@ object Chapter4e {
     case England, NorthernIreland, Scotland, Wales
 
   import UnitedKingdom.*
-  val country = England
+  private val country = England
   if country == Scotland then println("we're in scotland!")
 
-  def whereAmI(country: UnitedKingdom) = country match {
+  def whereAmI(country: UnitedKingdom): String = country match {
     case England => "I'm in England!"
     case NorthernIreland => "I'm in Northern Ireland!"
     case Scotland => "I'm in Scotland!"
