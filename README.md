@@ -1,4 +1,4 @@
-# iliana-scalabro
+# scaloneta
 🔺Scala 3 essentials 
 
 ```bash
